@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 
-
-export const ThemeContext = React.createContext(document.body.className);
+const isBrowser = typeof window !== "undefined";
+export const ThemeContext = React.createContext(!isBrowser ? "" : document.body.className);
 export const ThemeUpdateContext = React.createContext((theme: string) => {
 });
 
 const ThemeContextWrapper = ({children}: { children: React.ReactNode }) => {
-    const [theme, setTheme] = useState(document.body.className);
+    const [theme, setTheme] = useState(!isBrowser ? "" : document.body.className);
 
     const updateTheme = (currentTheme: string) => {
         setTheme(currentTheme === "light" ? "light" : "dark");
