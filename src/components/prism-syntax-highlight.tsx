@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
     Highlight,
     themes
@@ -9,8 +9,15 @@ const PrismSyntaxHighlight = ({ children, className }: {children: string, classN
     const language = className.replace(/language-/gm, '');
     // retrieve theme state
     const themeState = useContext(ThemeContext);
+    const [mounted, setMounted] = useState(false);
+
     const theme = themeState === 'light' ? themes.jettwaveLight : themes.duotoneDark;
 
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
     return (
         <Highlight code={children} language={language} theme={theme}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (

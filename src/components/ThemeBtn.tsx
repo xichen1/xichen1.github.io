@@ -20,7 +20,6 @@ const ThemeBtn = () => {
     const darkMode = useDarkMode(!isBrowser ?
         true : localStorage.getItem("darkMode") === "dark",darkConfig);
 
-
     useEffect(() => {
         setMounted(true);
     }, []);
@@ -29,7 +28,7 @@ const ThemeBtn = () => {
     return (
         <button
             onClick={e => {
-                const newTheme = darkMode.value ? "dark" : "light";
+                const newTheme = darkMode.value ? "light" : "dark";
                 darkMode.toggle();
                 updateTheme(newTheme); // update global theme status, use context
             }
