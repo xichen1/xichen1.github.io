@@ -1,6 +1,6 @@
 import React, {useState} from "react";
+import {isBrowser} from "@src/lib/checkUtil";
 
-const isBrowser = typeof window !== "undefined";
 export const ThemeContext = React.createContext(!isBrowser ? "" : document.body.className);
 export const ThemeUpdateContext = React.createContext((theme: string) => {
 });

@@ -12,7 +12,7 @@ const config: GatsbyConfig = {
     // If you use VSCode you can also use the GraphQL plugin
     // Learn more at: https://gatsby.dev/graphql-typegen
     graphqlTypegen: true,
-    plugins: ["gatsby-plugin-postcss", "gatsby-plugin-dark-mode","gatsby-plugin-image", "gatsby-plugin-sharp",
+    plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp",
         {
             resolve: `gatsby-plugin-alias-imports`,
             options: {
@@ -52,6 +52,15 @@ const config: GatsbyConfig = {
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
                 ],
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-use-dark-mode',
+            options: {
+                classNameDark: 'dark',
+                classNameLight: 'light',
+                storageKey: 'darkMode',
+                minify: true,
             },
         },
     ]
