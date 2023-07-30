@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ThemeUpdateContext} from "@src/components/ThemeContextWrapper";
 import {isBrowser} from "@src/lib/checkUtil";
-import useDarkMode from 'use-dark-mode';
+import useDarkMode from '@fisch0920/use-dark-mode';
 
 
 interface Props {
