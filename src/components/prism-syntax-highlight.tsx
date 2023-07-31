@@ -1,9 +1,9 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
-    Highlight,
-    themes
+    Highlight
 } from "prism-react-renderer";
 import {ThemeContext} from "@src/components/ThemeContextWrapper";
+import {duotoneDarkCustom, jettwaveLightCustom} from "@src/lib/prismThemes";
 
 const PrismSyntaxHighlight = ({ children, className }: {children: string, className: string}) => {
     if (!className) className = 'language-test';
@@ -12,7 +12,7 @@ const PrismSyntaxHighlight = ({ children, className }: {children: string, classN
     const themeState = useContext(ThemeContext);
     const [mounted, setMounted] = useState(false);
 
-    const theme = themeState === 'light' ? themes.jettwaveLight : themes.duotoneDark;
+    const theme = themeState === 'light' ? jettwaveLightCustom : duotoneDarkCustom;
 
     useEffect(() => {
         setMounted(true);
