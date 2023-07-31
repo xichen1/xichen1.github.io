@@ -6,6 +6,7 @@ import {
 import {ThemeContext} from "@src/components/ThemeContextWrapper";
 
 const PrismSyntaxHighlight = ({ children, className }: {children: string, className: string}) => {
+    if (!className) className = 'language-test';
     const language = className.replace(/language-/gm, '');
     // retrieve theme state
     const themeState = useContext(ThemeContext);
@@ -21,7 +22,7 @@ const PrismSyntaxHighlight = ({ children, className }: {children: string, classN
     return (
         <Highlight code={children} language={language} theme={theme}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={className} style={style}>
+                <pre className={className} style={style} >
                     {tokens.slice(0, -1).map((line, i) => (
                         <div key={i} {...getLineProps({ line, key: i })}>
                             {line.map((token, key) => (

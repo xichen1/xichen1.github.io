@@ -6,7 +6,14 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "bg-code-light": "#F1F9F5",
+        "font-code-light": "#859900",
+        "bg-code-dark": "#2A2734",
+        "font-code-dark": "#FFCC99",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 }
