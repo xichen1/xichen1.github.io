@@ -1,4 +1,3 @@
-import {ReactNode} from "react";
 import NavBar from "./NavBar";
 import React from "react";
 import ThemeContextWrapper from "@src/components/ThemeContextWrapper";
