@@ -7,9 +7,9 @@ import ThemeContextWrapper from "@src/components/ThemeContextWrapper";
 const Layout = ({pageTitle, children}: { pageTitle: string, children: React.ReactNode }) => {
     return (
         <ThemeContextWrapper>
-            <div className={``}>
+            <div className="">
                 <NavBar/>
-                <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">{children}</main>
+                <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">{children}</main>
             </div>
         </ThemeContextWrapper>
     );
