@@ -12,6 +12,7 @@ module.exports = {
         "font-code-light": "#859900",
         "bg-code-dark": "#2A2734",
         "font-code-dark": "#FFCC99",
+        "selection-dark": "#91AD70"
       },
     },
   },

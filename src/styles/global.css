@@ -22,21 +22,21 @@ body.light {
 }
 
 body.dark{
-    @apply bg-gray-900 selection:bg-indigo-500 text-white;
+    @apply bg-gray-900 selection:bg-selection-dark text-white;
 }
 
 .dark pre[class*='language-']::-moz-selection,
 .dark pre[class*='language-'] ::-moz-selection,
 .dark code[class*='language-']::-moz-selection,
 .dark code[class*='language-'] ::-moz-selection {
-    @apply bg-indigo-500;
+    @apply bg-selection-dark;
 }
 
 .dark pre[class*='language-']::selection,
 .dark pre[class*='language-'] ::selection,
 .dark code[class*='language-']::selection,
 .dark code[class*='language-'] ::selection {
-    @apply bg-indigo-500;
+    @apply bg-selection-dark;
 }
 
 .light pre[class*='language-']::-moz-selection,

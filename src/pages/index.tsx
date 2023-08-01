@@ -1,5 +1,5 @@
 import * as React from "react";
-import type {HeadFC, PageProps} from "gatsby";
+import type {PageProps} from "gatsby";
 import Layout from "@src/components/layout";
 import Seo from "@src/components/Seo";
 import BlogList from "@src/components/BlogList";
