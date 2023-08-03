@@ -9,12 +9,10 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import Img from "gatsby-image"
-
 const Bio = () => {
     const data = useStaticQuery(graphql`
     query {
-      avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
+      avatar: file(absolutePath: { regex: "/images/profile-pic.png/" }) {
           childImageSharp {
             gatsbyImageData(layout: FIXED, width: 50)
           }
