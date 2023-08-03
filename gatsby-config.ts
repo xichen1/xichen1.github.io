@@ -3,7 +3,12 @@ import type {GatsbyConfig} from "gatsby";
 const config: GatsbyConfig = {
     siteMetadata: {
         title: `PPX Blog`,
-        siteUrl: `https://blog.ppxa.link`
+        siteUrl: `https://blog.ppxa.link`,
+        description: `PPX Blog`,
+        social: {
+            twitter: `GbdPpx`,
+            github: `xichen1`
+        },
     },
     flags: {
         DEV_SSR: true

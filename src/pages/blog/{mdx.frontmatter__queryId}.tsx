@@ -20,7 +20,8 @@ type BlogPostProps = PageProps & {
 const components = {
     code: ({children, className}: { children: string, className: string }) => {
         return className ? <PrismSyntaxHighlight className={className}>{children}</PrismSyntaxHighlight>
-            : <code className="bg-bg-code-light dark:bg-bg-code-dark text-font-code-light dark:text-font-code-dark">{children}</code>;
+            : <code
+                className="bg-bg-code-light dark:bg-bg-code-dark text-font-code-light dark:text-font-code-dark">{children}</code>;
 
     }
 };
@@ -49,7 +50,8 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
                 </header>
                 <div className="divide-y divide-gray-200 pb-7 dark:divide-gray-700 xl:divide-y-0">
                     <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-                        <div className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg prose-pre:p-0 prose-pre:m-0 prose-pre:bg-transparent">
+                        <div
+                            className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg prose-pre:p-0 prose-pre:m-0 prose-pre:bg-transparent">
                             <MDXProvider components={components as Components}>
                                 {children}
                             </MDXProvider>
@@ -72,6 +74,18 @@ export const query = graphql`
   }
  `;
 
-export const Head = () => <Seo title="Super Cool Blog Posts"/>;
+export const Head: React.FC<BlogPostProps> = (props) => {
+    const {data, children} = props;
+    if (!data.mdx || !data.mdx.frontmatter) return null;
+    const frontmatter = data.mdx.frontmatter;
+    return (
+        <>
+            <html lang="en" />
+            <Seo title={frontmatter.title}/>
+        </>
+    );
+
+};
+
 
 export default BlogPost;

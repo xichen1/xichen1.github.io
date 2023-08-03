@@ -24,4 +24,11 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 
-export const Head = () => <Seo title="Home Page" />
+export const Head = () => {
+    return (
+        <>
+            <html lang="en" />
+            <Seo title="Home Page"/>
+        </>
+    )
+}
