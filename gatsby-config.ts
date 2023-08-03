@@ -5,6 +5,10 @@ const config: GatsbyConfig = {
         title: `PPX Blog`,
         siteUrl: `https://blog.ppxa.link`,
         description: `PPX Blog`,
+        author: {
+            name: `Xichen Pan`,
+            summary: `who lives in Vancouver.`,
+        },
         social: {
             twitter: `GbdPpx`,
             github: `xichen1`
@@ -17,7 +21,7 @@ const config: GatsbyConfig = {
     // If you use VSCode you can also use the GraphQL plugin
     // Learn more at: https://gatsby.dev/graphql-typegen
     graphqlTypegen: true,
-    plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp",
+    plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
         {
             resolve: `gatsby-plugin-alias-imports`,
             options: {
@@ -35,6 +39,13 @@ const config: GatsbyConfig = {
                 name: `blog`,
                 path: `${__dirname}/blog`,
             }
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/assets/images`,
+            },
         },
         {
             resolve: `gatsby-plugin-mdx`,
