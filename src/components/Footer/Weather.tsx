@@ -14,11 +14,11 @@ type weatherDataType = null | {
 
 const Weather = () => {
     const [weatherData, setWeatherData] = useState<weatherDataType>(null);
-
+    const cityId = "EF058";
     useEffect(() => {
         const fetchData = async () => {
             const weatherData = await axios
-                .get(`https://devapi.qweather.com/v7/weather/now?location=EF058&lang=en&key=${process.env.GATSBY_WEATHER_API_KEY}`);
+                .get(`https://weather.ppxa.link/weather/${cityId}`);
             setWeatherData(weatherData.data);
         };
         fetchData().catch(console.error);
