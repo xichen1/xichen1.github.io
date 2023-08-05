@@ -2,7 +2,6 @@ import NavBar from "./NavBar";
 import React from "react";
 import ThemeContextWrapper from "@src/components/ThemeContextWrapper";
 
-// const inter = Inter({subsets: ["latin"]});
 const Layout = ({pageTitle, children}: { pageTitle: string, children: React.ReactNode }) => {
     return (
         <ThemeContextWrapper>

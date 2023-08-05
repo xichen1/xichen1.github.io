@@ -5,6 +5,7 @@ import {graphql, PageProps} from "gatsby";
 import {MDXProvider} from "@mdx-js/react";
 import PrismSyntaxHighlight from "@src/components/prism-syntax-highlight";
 import {Components} from "@mdx-js/react/lib";
+import Footer from "@src/components/Footer/Footer";
 
 type BlogPostProps = PageProps & {
     data: {
@@ -59,6 +60,7 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </Layout>
     );
 };
@@ -80,7 +82,8 @@ export const Head: React.FC<BlogPostProps> = (props) => {
     const frontmatter = data.mdx.frontmatter;
     return (
         <>
-            <html lang="en" />
+            <html lang="en"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.4.0/font/qweather-icons.css"/>
             <Seo title={frontmatter.title}/>
         </>
     );
