@@ -1,4 +1,4 @@
-import Weather from "@src/components/Weather";
+import Weather from "@src/components/Footer/Weather";
 import * as React from "react";
 import CopyRight from "@src/components/Footer/CopyRight";
 

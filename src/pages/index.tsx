@@ -4,7 +4,7 @@ import Layout from "@src/components/layout";
 import Seo from "@src/components/Seo";
 import BlogList from "@src/components/BlogList";
 import Bio from "@src/components/Bio";
-import Weather from "@src/components/Weather";
+import Weather from "@src/components/Footer/Weather";
 import Footer from "@src/components/Footer/Footer";
 
 const IndexPage: React.FC<PageProps> = () => {

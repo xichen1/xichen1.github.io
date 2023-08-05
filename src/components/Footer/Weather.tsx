@@ -17,8 +17,9 @@ const Weather = () => {
 
     useEffect(() => {
         const fetchData = async () => {
+            console.log(`https://devapi.qweather.com/v7/weather/now?location=EF058&lang=en&key=${process.env.WEATHER_API_KEY}`)
             const weatherData = await axios
-                .get("https://devapi.qweather.com/v7/weather/now?location=EF058&lang=en&key=10c9af4d2a654c2292d6e62083642c9b");
+                .get(`https://devapi.qweather.com/v7/weather/now?location=EF058&lang=en&key=${process.env.WEATHER_API_KEY}`);
             setWeatherData(weatherData.data);
         };
         fetchData().catch(console.error);
