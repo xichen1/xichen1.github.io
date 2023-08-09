@@ -95,6 +95,7 @@ const config: GatsbyConfig = {
                 minify: true,
             },
         },
+        'gatsby-plugin-sitemap',
     ]
 };
 
