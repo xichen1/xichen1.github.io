@@ -96,6 +96,14 @@ const config: GatsbyConfig = {
             },
         },
         'gatsby-plugin-sitemap',
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: 'https://blog.ppxa.link/',
+                sitemap: 'https://blog.ppxa.link/sitemap-index.xml',
+                policy: [{userAgent: '*', allow: '/'}]
+            }
+        }
     ]
 };
 
