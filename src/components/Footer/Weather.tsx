@@ -16,12 +16,9 @@ const Weather = () => {
     const [weatherData, setWeatherData] = useState<weatherDataType>(null);
     const cityId = "EF058";
     useEffect(() => {
-        const fetchData = async () => {
-            const weatherData = await axios
-                .get(`https://weather.ppxa.link/weather/${cityId}`);
-            setWeatherData(weatherData.data);
-        };
-        fetchData().catch(console.error);
+        axios.get(`https://weather.ppxa.link/weather/${cityId}`)
+            .then((res) => setWeatherData(res.data))
+            .catch((_err) => console.log("Weather service is currently unavailable."));
     }, []);
     return (
         !weatherData ? null :
