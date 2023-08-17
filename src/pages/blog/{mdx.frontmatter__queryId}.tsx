@@ -13,6 +13,7 @@ type BlogPostProps = PageProps & {
             frontmatter: {
                 title: string
                 date: string
+                description: string
             }
         }
     }
@@ -71,6 +72,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
+        description
       }
     }
   }
@@ -84,7 +86,7 @@ export const Head: React.FC<BlogPostProps> = (props) => {
         <>
             <html lang="en"/>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.4.0/font/qweather-icons.css"/>
-            <Seo title={frontmatter.title}/>
+            <Seo title={frontmatter.title} des={frontmatter.description}/>
         </>
     );
 

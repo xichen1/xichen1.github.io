@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
     siteMetadata: {
         title: `PPX Blog`,
         siteUrl: `https://blog.ppxa.link`,
-        description: `PPX Blog`,
+        description: `This is Xichen Pan's blog.`,
         author: {
             name: `Xichen Pan`,
             summary: `who lives in Vancouver.`,
@@ -103,7 +103,13 @@ const config: GatsbyConfig = {
                 sitemap: 'https://blog.ppxa.link/sitemap-index.xml',
                 policy: [{userAgent: '*', allow: '/'}]
             }
-        }
+        },
+        {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                "icon": "assets/images/profile-pic.png"
+            }
+        },
     ]
 };
 
