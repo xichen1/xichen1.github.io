@@ -48,9 +48,9 @@ const Bio = () => {
                     borderRadius: `50%`,
                 }}
             />
-            <div className="ml-3">
-                <span className="mb-3">Written by <strong>{author.name}</strong> {author.summary}<br/></span>
-                You can follow him on&nbsp;
+            <div className="ml-3 w-3/4 md:w-full">
+                <div className="mb-3">Written by <strong>{author.name}</strong> {author.summary}<br/></div>
+                <span>You can follow him on&nbsp;</span>
                 <a href={`https://twitter.com/${social.twitter}`}
                    className="underline font-bold" target="_blank">
                     Twitter
