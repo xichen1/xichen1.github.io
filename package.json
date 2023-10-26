@@ -56,8 +56,14 @@
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint-plugin-flowtype": "8.0.3",
     "gh-pages": "^5.0.0",
     "typescript": "^5.1.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
