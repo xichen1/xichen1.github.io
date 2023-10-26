@@ -29,6 +29,7 @@
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-mdx": "^5.11.0",
+    "gatsby-plugin-pnpm": "^1.2.10",
     "gatsby-plugin-postcss": "^6.11.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.11.0",
@@ -55,13 +56,8 @@
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
-    "cz-conventional-changelog": "^3.3.0",
+    "eslint-plugin-flowtype": "8.0.3",
     "gh-pages": "^5.0.0",
     "typescript": "^5.1.6"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

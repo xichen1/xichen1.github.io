@@ -110,6 +110,7 @@ const config: GatsbyConfig = {
                 "icon": "assets/images/profile-pic.png"
             }
         },
+        'gatsby-plugin-pnpm'
     ]
 };
 
