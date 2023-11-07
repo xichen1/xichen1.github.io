@@ -1,6 +1,7 @@
 import {Link} from "gatsby";
 import ThemeBtn from "./ThemeBtn";
 import React from "react";
+import NavBtn from "@src/components/NavBtn";
 
 const NavBar = () => {
     return (
@@ -12,7 +13,11 @@ const NavBar = () => {
                             PPX <span className="text-teal-500">Blog</span>
                         </h2>
                     </Link>
-                    <ThemeBtn/>
+                    <div className="flex justify-center text-lg font-medium">
+                        <NavBtn name={"About"} />
+                        <ThemeBtn/>
+                    </div>
+
                 </div>
             </div>
         </div>
